@@ -79,18 +79,42 @@ header h1#logo {
   user-select: none !important;
 }
 
-header button#btn-listen {
-  all: unset;
-  display: inline-block;
+header p {
+  margin-top: 0.5em;
+  padding: 0.5em 0;
+  font-size: 1.2rem;
+}
+
+header p a#btn-listen {
+  padding: 0.5em 1em;
   color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: #7ecb58;
+  transition: background-color 200ms ease-in-out;
+  cursor: pointer;
+}
+
+header p a#btn-listen:hover, header p a#btn-listen:focus {
+  background-color: #73bc4f;
+}
+
+@media only screen and (min-width: 36em) {
+  header p {
+    margin-top: 0;
+  }
 }
 
 @media only screen and (min-width: 36em) {
   header {
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 11.2220625em;
   }
+}
+
+section {
+  margin: 2em 0;
 }
 
 h1.heading-section,
@@ -100,42 +124,33 @@ h3.episode-no {
   text-transform: uppercase;
 }
 
+h1.heading-section {
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+}
+
 h2.episode-name {
   color: #000;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.latest-episode {
+.latest-episode__grid {
   display: -moz-grid;
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "latest-episode__heading" "latest-episode__thumbnail" "latest-episode__content";
 }
 
-.latest-episode h1.heading-section {
-  grid-area: latest-episode__heading;
-}
-
-.latest-episode .latest-episode__thumbnail {
-  grid-area: latest-episode__thumbnail;
-}
-
-.latest-episode .latest-episode__content {
-  grid-area: latest-episode__content;
-}
-
-.latest-episode .latest-episode__content h2.episode-name {
+.latest-episode__grid .latest-episode__content h2.episode-name {
   font-size: 2rem;
 }
 
 @media only screen and (min-width: 36em) {
-  .latest-episode {
+  .latest-episode__grid {
     gap: 2em;
     grid-template-rows: auto auto;
     grid-template-columns: 3fr 7fr;
-    grid-template-areas: "latest-episode__heading latest-episode__heading" "latest-episode__thumbnail latest-episode__content";
   }
 }
 
@@ -146,9 +161,13 @@ h2.episode-name {
   grid-template-columns: repeat(1, 1fr);
 }
 
+.next-episodes .episodes .episode h3 {
+  margin-top: 0.5em;
+}
+
 @media only screen and (min-width: 36em) {
   .next-episodes .episodes {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -158,10 +177,17 @@ h2.episode-name {
   }
 }
 
+@media only screen and (min-width: 100em) {
+  .next-episodes .episodes {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 .about .about__grid {
-  gap: 2em;
+  gap: 4em;
   display: -moz-grid;
   display: grid;
+  margin: 2em 0;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
 }
@@ -192,6 +218,12 @@ footer {
   background-color: #7ecb58;
 }
 
-footer i.icon-arrow::before {
+footer .container p#footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+footer .container p#footer-logo i.icon-arrow::before {
   color: #fff;
 }

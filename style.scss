@@ -11,6 +11,7 @@ $font: "Poppins", sans-serif;
 $black: #000;
 $white: #fff;
 $accent: #7ecb58;
+$accent-hover: #73bc4f;
 $grey: #a2a2a2;
 
 * {
@@ -67,8 +68,8 @@ i.icon-arrow::before {
 }
 
 header {
-    display: -ms-grid;
     display: -moz-grid;
+    display: -ms-grid;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
@@ -84,17 +85,40 @@ header {
         user-select: none !important;
     }
 
-    button#btn-listen {
-        all: unset;
-        display: inline-block;
-        color: $white;
-        background-color: $accent;
+    p {
+        margin-top: 0.5em;
+        padding: 0.5em 0;
+        font-size: 1.2rem;
+
+        a#btn-listen {
+            padding: 0.5em 1em;
+            color: $white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: $accent;
+            transition: background-color 200ms ease-in-out;
+            cursor: pointer;
+    
+            &:hover,
+            &:focus {
+                background-color: $accent-hover;
+            }
+        }
+
+        @media only screen and (min-width: 36em) {
+            margin-top: 0;
+        }
     }
 
     @media only screen and (min-width: 36em) {
         grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto 11.2220625em;
     }
+}
+
+section {
+    margin: 2em 0;
 }
 
 h1.heading-section,
@@ -104,30 +128,25 @@ h3.episode-no {
     text-transform: uppercase;
 }
 
+h1.heading-section {
+    font-size: 1.7rem;
+    margin-bottom: 1em;
+}
+
 h2.episode-name {
     color: $black;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.latest-episode {
+.latest-episode__grid {
     display: -moz-grid;
     display: -ms-grid;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     grid-template-columns: 1fr;
-    grid-template-areas: "latest-episode__heading""latest-episode__thumbnail""latest-episode__content";
-
-    h1.heading-section {
-        grid-area: latest-episode__heading;
-    }
-
-    .latest-episode__thumbnail {
-        grid-area: latest-episode__thumbnail;
-    }
 
     .latest-episode__content {
-        grid-area: latest-episode__content;
 
         h2.episode-name {
             font-size: 2rem;
@@ -138,7 +157,6 @@ h2.episode-name {
         gap: 2em;
         grid-template-rows: auto auto;
         grid-template-columns: 3fr 7fr;
-        grid-template-areas: "latest-episode__heading latest-episode__heading""latest-episode__thumbnail latest-episode__content";
     }
 }
 
@@ -150,22 +168,31 @@ h2.episode-name {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
 
+        .episode h3 {
+            margin-top: 0.5em;
+        }
+
         @media only screen and (min-width: 36em) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
 
         @media only screen and (min-width: 62em) {
             grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media only screen and (min-width: 100em) {
+            grid-template-columns: repeat(5, 1fr);
         }
     }
 }
 
 .about {
     .about__grid {
-        gap: 2em;
+        gap: 4em;
         display: -moz-grid;
         display: -ms-grid;
         display: grid;
+        margin: 2em 0;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
 
@@ -194,7 +221,15 @@ footer {
     color: $white;
     background-color: $accent;
 
-    i.icon-arrow::before {
-        color: $white;
+    .container {
+        p#footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            i.icon-arrow::before {
+                color: $white;
+            }
+        }
     }
 }

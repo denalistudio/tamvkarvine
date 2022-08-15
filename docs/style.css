@@ -66,7 +66,6 @@ i.icon-arrow::before {
 }
 
 header {
-  display: -moz-grid;
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
@@ -143,7 +142,6 @@ h2.episode-name {
 }
 
 .latest-episode__grid {
-  display: -moz-grid;
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr;
@@ -154,7 +152,6 @@ h2.episode-name {
 }
 
 .latest-episode__grid .latest-episode__content .links {
-  display: -ms-inline-flexbox;
   display: flex;
   flex-wrap: wrap;
   margin-top: 1em;
@@ -176,7 +173,6 @@ h2.episode-name {
 
 .next-episodes .episodes {
   gap: 2em;
-  display: -moz-grid;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }

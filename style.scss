@@ -213,6 +213,7 @@ h2.episode-name {
     .about__grid {
         gap: 4em;
         display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         flex-wrap: wrap;
 

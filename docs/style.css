@@ -115,7 +115,13 @@ header p a#btn-listen:hover, header p a#btn-listen:focus {
 }
 
 section {
-  margin: 2em 0;
+  margin: 3em 0;
+}
+
+@media only screen and (min-width: 36em) {
+  section {
+    margin: 4em 0;
+  }
 }
 
 h1.heading-section,
@@ -186,15 +192,18 @@ h2.episode-name {
 
 .about .about__grid {
   gap: 4em;
-  display: -moz-grid;
-  display: grid;
-  margin: 2em 0;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about .about__grid .about__content {
+  flex-basis: 100%;
 }
 
 .about .about__grid .about__content h2 {
+  font-size: 1.7rem;
   text-transform: uppercase;
+  margin-bottom: 0.5em;
 }
 
 .about .about__grid .about__content h2 br {
@@ -208,9 +217,34 @@ h2.episode-name {
 }
 
 @media only screen and (min-width: 36em) {
+  .about .about__grid .about__content {
+    flex-basis: calc(50% - 2em);
+  }
+}
+
+.about .about__grid .about__image {
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 36em) {
+  .about .about__grid .about__image {
+    flex-basis: calc(50% - 2em);
+  }
+}
+
+@media only screen and (min-width: 36em) {
   .about .about__grid {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    flex-wrap: nowrap;
+  }
+}
+
+.about .about__grid:first-of-type {
+  margin-bottom: 3em;
+}
+
+@media only screen and (min-width: 36em) {
+  .about .about__grid:first-of-type {
+    margin-bottom: 4em;
   }
 }
 

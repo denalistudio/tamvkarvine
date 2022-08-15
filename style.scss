@@ -100,7 +100,7 @@ header {
             background-color: $accent;
             transition: background-color 200ms ease-in-out;
             cursor: pointer;
-    
+
             &:hover,
             &:focus {
                 background-color: $accent-hover;
@@ -119,7 +119,11 @@ header {
 }
 
 section {
-    margin: 2em 0;
+    margin: 3em 0;
+
+    @media only screen and (min-width: 36em) {
+        margin: 4em 0;
+    }
 }
 
 h1.heading-section,
@@ -190,16 +194,17 @@ h2.episode-name {
 .about {
     .about__grid {
         gap: 4em;
-        display: -moz-grid;
-        display: -ms-grid;
-        display: grid;
-        margin: 2em 0;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
 
         .about__content {
+            flex-basis: 100%;
+
             h2 {
+                font-size: 1.7rem;
                 text-transform: uppercase;
+                margin-bottom: 0.5em;
 
                 br {
                     display: none;
@@ -209,11 +214,30 @@ h2.episode-name {
                     }
                 }
             }
+
+            @media only screen and (min-width: 36em) {
+                flex-basis: calc(50% - 2em);
+            }
+        }
+
+        .about__image {
+            flex-basis: 100%;
+
+            @media only screen and (min-width: 36em) {
+                flex-basis: calc(50% - 2em);
+            }
         }
 
         @media only screen and (min-width: 36em) {
-            grid-template-rows: auto;
-            grid-template-columns: 1fr 1fr;
+            flex-wrap: nowrap;
+        }
+    }
+
+    .about__grid:first-of-type {
+        margin-bottom: 3em;
+
+        @media only screen and (min-width: 36em) {
+            margin-bottom: 4em;
         }
     }
 }

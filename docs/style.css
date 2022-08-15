@@ -3,7 +3,8 @@
   font-family: "tamvkarvine";
   font-weight: normal;
   font-style: normal;
-  src: url("./font/tamvkarvine.woff") format("woff");
+  src: url("./font/tamvkarvine.eot");
+  src: url("./font/tamvkarvine.eot?#iefix") format("embedded-opentype"), url("./font/tamvkarvine.woff") format("woff"), url("./font/tamvkarvine.ttf") format("truetype"), url("./font/tamvkarvine.svg") format("svg");
 }
 
 * {

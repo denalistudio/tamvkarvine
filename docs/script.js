@@ -1,0 +1,4 @@
+document.querySelectorAll("span.arrow").forEach(function(element) {
+    const svg = '<svg viewBox="0 0 83 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;"><path d="M43.999,17.868l8.332,8.332l-8.332,8.332" style="fill:none;stroke:#7ecb58;stroke-width:5.55px;"/><path d="M26.2,26.2l26.131,-0" style="fill:none;stroke:#7ecb58;stroke-width:5.55px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>';
+    element.innerHTML = svg;
+});

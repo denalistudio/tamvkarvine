@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+    font-family: "tamvkarvine";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./font/tamvkarvine.woff") format("woff");
+}
+
+$font: "Poppins", sans-serif;
+$black: #000;
+$white: #fff;
+$accent: #7ecb58;
+$grey: #a2a2a2;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    font-family: $font;
+}
+
+i.icon-arrow::before {
+    content: "\61";
+    color: $accent;
+    font-family: "tamvkarvine";
+    font-style: normal;
+    font-size: 0.7em;
+    text-transform: lowercase !important;
+    margin: 0 0.2em;
+}
+
+.rectangle {
+    width: 100%;
+    background-color: $accent;
+}
+
+.container {
+    padding: 1em;
+
+    @media only screen and (min-width: 36em) {
+        width: 90%;
+        margin: auto;
+        padding: 1em 0;
+    }
+
+    @media only screen and (min-width: 62em) {
+        width: 80%;
+    }
+
+    @media only screen and (min-width: 75em) {
+        width: 75%;
+    }
+}
+
+header {
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+
+    h1#logo {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+    }
+
+    button#btn-listen {
+        all: unset;
+        display: inline-block;
+        color: $white;
+        background-color: $accent;
+    }
+
+    @media only screen and (min-width: 36em) {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+h1.heading-section,
+h3.episode-no {
+    color: $grey;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2.episode-name {
+    color: $black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.latest-episode {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "latest-episode__heading""latest-episode__thumbnail""latest-episode__content";
+
+    h1.heading-section {
+        grid-area: latest-episode__heading;
+    }
+
+    .latest-episode__thumbnail {
+        grid-area: latest-episode__thumbnail;
+    }
+
+    .latest-episode__content {
+        grid-area: latest-episode__content;
+
+        h2.episode-name {
+            font-size: 2rem;
+        }
+    }
+
+    @media only screen and (min-width: 36em) {
+        gap: 2em;
+        grid-template-rows: auto auto;
+        grid-template-columns: 3fr 7fr;
+        grid-template-areas: "latest-episode__heading latest-episode__heading""latest-episode__thumbnail latest-episode__content";
+    }
+}
+
+.next-episodes {
+    .episodes {
+        gap: 2em;
+        display: -moz-grid;
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        @media only screen and (min-width: 36em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (min-width: 62em) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.about {
+    .about__grid {
+        gap: 2em;
+        display: -moz-grid;
+        display: -ms-grid;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+
+        .about__content {
+            h2 {
+                text-transform: uppercase;
+
+                br {
+                    display: none;
+
+                    @media only screen and (min-width: 62em) {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: 36em) {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+footer {
+    color: $white;
+    background-color: $accent;
+
+    i.icon-arrow::before {
+        color: $white;
+    }
+}

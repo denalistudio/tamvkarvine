@@ -168,14 +168,28 @@ h2.episode-name {
         }
 
         .links {
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+            gap: 1em;
+            display: inline-grid;
+            grid-template-rows: 1fr auto;
+            grid-template-columns: 1fr 1fr;
             margin-top: 1em;
 
-            @media only screen and (min-width: 36em) {
-                -ms-flex-wrap: nowrap;
-                flex-wrap: nowrap;
+            a {
+                display: flex;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            @media only screen and (min-width: 48em) {
+                grid-template-rows: 2.5em;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                a img {
+                    width: auto;
+                    height: 100%;
+                }
             }
         }
     }

@@ -70,6 +70,7 @@ i.icon-arrow::before {
 }
 
 header {
+    gap: .7em;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
@@ -85,35 +86,47 @@ header {
         user-select: none !important;
     }
 
-    p {
-        margin-top: 1em;
-        padding: 0.5em 0;
-        font-size: 1.2rem;
+    .col {
+        gap: 1em;
+        display: inline-flex;
+        align-items: center;
 
-        a#btn-listen {
-            padding: 0.5em 1em;
-            color: $white;
+        p {
+            padding: 0.5em 0;
             font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            background-color: $accent;
-            transition: background-color 200ms ease-in-out;
-            cursor: pointer;
-
-            &:hover,
-            &:focus {
-                background-color: $accent-hover;
+    
+            a#btn-listen {
+                padding: 0.5em 1em;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                background-color: $accent;
+                transition: background-color 200ms ease-in-out;
+                cursor: pointer;
+    
+                &:hover,
+                &:focus {
+                    background-color: $accent-hover;
+                }
             }
         }
 
-        @media only screen and (min-width: 36em) {
-            margin-top: 0;
+        .header__instagram {
+            height: 3em;
+            display: flex;
+            align-items: center;
+
+            svg {
+                height: 2.7em;
+                display: block;
+            }
         }
     }
 
     @media only screen and (min-width: 36em) {
-        grid-template-rows: auto;
-        grid-template-columns: auto 11.2220625em;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
     }
 }
 

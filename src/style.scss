@@ -94,7 +94,7 @@ header {
         p {
             padding: 0.5em 0;
             font-size: 1.2rem;
-    
+
             a#btn-listen {
                 padding: 0.5em 1em;
                 color: $white;
@@ -104,7 +104,7 @@ header {
                 background-color: $accent;
                 transition: background-color 200ms ease-in-out;
                 cursor: pointer;
-    
+
                 &:hover,
                 &:focus {
                     background-color: $accent-hover;
@@ -349,6 +349,18 @@ footer {
                 display: flex;
                 align-items: center;
                 padding-top: 0;
+            }
+        }
+
+        #signature svg {
+            height: 12px;
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            stroke-linejoin: round;
+            stroke-miterlimit: 2;
+
+            path {
+                fill: $white;
             }
         }
 

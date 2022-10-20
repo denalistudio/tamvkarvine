@@ -271,11 +271,26 @@ h2.episode-name {
 
 figure#karvina {
     width: 100%;
-    height: 30em;
+    height: 10em;
 
     img {
-        height: 30em;
         object-fit: cover;
+    }
+
+    @media only screen and (min-width: 36em) {
+        height: 15em;
+    }
+
+    @media only screen and (min-width: 62em) {
+        height: 17em;
+    }
+
+    @media only screen and (min-width: 75em) {
+        height: 20em;
+    }
+
+    @media only screen and (min-width: 100em) {
+        height: 25em;
     }
 }
 

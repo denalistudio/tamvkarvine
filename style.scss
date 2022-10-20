@@ -259,6 +259,16 @@ h2.episode-name {
     }
 }
 
+figure#karvina {
+    width: 100%;
+    height: 30em;
+
+    img {
+        height: 30em;
+        object-fit: cover;
+    }
+}
+
 footer {
     background-color: $accent;
 

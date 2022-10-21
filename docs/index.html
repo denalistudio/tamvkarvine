@@ -164,6 +164,39 @@
             </div>
         </div>
     </footer>
+    <div id="modal-background">
+        <div id="modal">
+            <p>NADPIS</p>
+            <div class="streaming_platforms">
+                <a href="#">
+                    <img src="./images/Apple_Podcast_Icon.png">
+                    <p>Apple Podcasty</p>
+                </a>
+                <a href="#">
+                    <img src="">
+                    <p>Spotify</p>
+                </a>
+                <a href="#">
+                    <img src="">
+                    <p>Google Podcasty</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById("btn-listen");
+        const modal = document.getElementById("modal-background");
+        const body = document.querySelector("body");
+        let modalOpen = false;
+        btn.onclick = function () {
+            modalOpen = true;
+            modal.style.display = "flex";
+            setTimeout(function () {
+                modal.classList.add("open");
+            }, 10);
+            body.style.overflowY = "hidden";
+        };
+    </script>
 </body>
 
 </html>

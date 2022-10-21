@@ -329,6 +329,16 @@ footer .container .footer__instagram a svg {
     padding-top: 0;
   }
 }
+footer .container #signature svg {
+  height: 12px;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  stroke-linejoin: round;
+  stroke-miterlimit: 2;
+}
+footer .container #signature svg path {
+  fill: #fff;
+}
 @media only screen and (min-width: 36em) {
   footer .container {
     grid-template-columns: 1fr 2.5em;

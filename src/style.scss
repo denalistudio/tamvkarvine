@@ -74,12 +74,16 @@ header {
     gap: .7em;
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "header__logo ." "header__col header__col";
 
-    h1#logo {
+    a#logo {
+        grid-area: header__logo;
+        color: $black;
         font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
+        text-decoration: none;
         -webkit-user-select: none !important;
         -moz-user-select: none !important;
         -ms-user-select: none !important;
@@ -90,6 +94,7 @@ header {
         gap: 1em;
         display: inline-flex;
         align-items: center;
+        grid-area: header__col;
 
         p {
             font-size: 1.2rem;
@@ -139,7 +144,8 @@ header {
 
     @media only screen and (min-width: 36em) {
         grid-template-rows: 3em;
-        grid-template-columns: 1fr auto;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "header__logo . header__col";
     }
 }
 
@@ -561,5 +567,15 @@ footer {
         z-index: 1;
         visibility: visible;
         opacity: 1;
+    }
+}
+
+body.single {
+    main {
+        margin: 3em 0;
+
+        @media only screen and (min-width: 36em) {
+            margin: 4em 0;
+        }
     }
 }

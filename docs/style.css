@@ -71,7 +71,6 @@ header h1#logo {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  -webkit-touch-callout: none !important;
   -webkit-user-select: none !important;
   -moz-user-select: none !important;
   -ms-user-select: none !important;
@@ -79,14 +78,16 @@ header h1#logo {
 }
 header .col {
   gap: 1em;
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: auto auto;
   align-items: center;
 }
 header .col p {
-  padding: 0.5em 0;
   font-size: 1.2rem;
 }
 header .col p a#btn-listen {
+  display: block;
   padding: 0.5em 1em;
   color: #fff;
   font-size: 1.2rem;
@@ -100,12 +101,18 @@ header .col p a#btn-listen:hover, header .col p a#btn-listen:focus {
   background-color: #73bc4f;
 }
 header .col .header__instagram {
-  height: 3em;
+  height: 100%;
   display: flex;
   align-items: center;
+  padding: 0.5em;
+  background-color: #7ecb58;
+  transition: background-color 200ms ease-in-out;
+}
+header .col .header__instagram:hover, header .col .header__instagram:focus {
+  background-color: #73bc4f;
 }
 header .col .header__instagram svg {
-  height: 2.7em;
+  height: 100%;
   display: block;
 }
 @media only screen and (min-width: 36em) {

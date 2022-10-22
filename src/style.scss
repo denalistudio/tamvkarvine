@@ -79,7 +79,6 @@ header {
         font-size: 2rem;
         font-weight: 700;
         text-transform: uppercase;
-        -webkit-touch-callout: none !important;
         -webkit-user-select: none !important;
         -moz-user-select: none !important;
         -ms-user-select: none !important;
@@ -88,15 +87,17 @@ header {
 
     .col {
         gap: 1em;
-        display: inline-flex;
+        display: inline-grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto auto;
         align-items: center;
 
         p {
-            padding: 0.5em 0;
             font-size: 1.2rem;
 
             a#btn-listen {
-                padding: 0.5em 1em;
+                display: block;
+                padding: .5em 1em;
                 color: $white;
                 font-size: 1.2rem;
                 font-weight: 700;
@@ -113,12 +114,20 @@ header {
         }
 
         .header__instagram {
-            height: 3em;
+            height: 100%;
             display: flex;
             align-items: center;
+            padding: .5em;
+            background-color: $accent;
+            transition: background-color 200ms ease-in-out;
+
+            &:hover,
+            &:focus {
+                background-color: $accent-hover;
+            }
 
             svg {
-                height: 2.7em;
+                height: 100%;
                 display: block;
             }
         }

@@ -18,6 +18,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  line-height: 1.5;
 }
 
 i.icon-arrow::before {
@@ -101,16 +102,6 @@ header .col p a#btn-listen {
 header .col p a#btn-listen:hover, header .col p a#btn-listen:focus {
   background-color: #73bc4f;
 }
-@media only screen and (min-width: 36em) {
-  header .col p a#btn-listen {
-    height: 100%;
-  }
-}
-@media only screen and (min-width: 36em) {
-  header .col p {
-    height: 100%;
-  }
-}
 header .col .header__instagram {
   width: 3em;
   height: 3em;
@@ -129,15 +120,8 @@ header .col .header__instagram:hover, header .col .header__instagram:focus {
   background-color: #73bc4f;
 }
 @media only screen and (min-width: 36em) {
-  header .col .header__instagram {
-    width: auto;
-    height: 100%;
-    aspect-ratio: 1;
-  }
-}
-@media only screen and (min-width: 36em) {
   header {
-    grid-template-rows: 1fr;
+    grid-template-rows: 3em;
     grid-template-columns: 1fr auto;
   }
 }

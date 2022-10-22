@@ -30,6 +30,7 @@ html {
 
 body {
     font-family: $font;
+    line-height: 1.5;
 }
 
 i.icon-arrow::before {
@@ -111,14 +112,6 @@ header {
                 &:focus {
                     background-color: $accent-hover;
                 }
-
-                @media only screen and (min-width: 36em) {
-                    height: 100%;
-                }
-            }
-
-            @media only screen and (min-width: 36em) {
-                height: 100%;
             }
         }
 
@@ -141,17 +134,11 @@ header {
             &:focus {
                 background-color: $accent-hover;
             }
-
-            @media only screen and (min-width: 36em) {
-                width: auto;
-                height: 100%;
-                aspect-ratio: 1;
-            }
         }
     }
 
     @media only screen and (min-width: 36em) {
-        grid-template-rows: 1fr;
+        grid-template-rows: 3em;
         grid-template-columns: 1fr auto;
     }
 }

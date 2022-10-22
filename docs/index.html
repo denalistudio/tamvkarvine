@@ -493,7 +493,7 @@
         let modalOpen = false;
         btnListen.onclick = function () {
             modalOpen = true;
-            modal.style.display = "flex";
+            modal.classList.add("display");
             setTimeout(function () {
                 modal.classList.add("open");
             }, 10);
@@ -502,7 +502,7 @@
         btnBack.onclick = function () {
             modal.classList.remove("open");
             setTimeout(function () {
-                modal.style.dispaly = "none";
+                modal.classList.remove("display");
             }, 210);
             body.style.overflowY = "auto";
             modalOpen = false;

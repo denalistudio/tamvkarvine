@@ -78,17 +78,18 @@ header h1#logo {
 }
 header .col {
   gap: 1em;
-  display: inline-grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: auto auto;
+  display: inline-flex;
   align-items: center;
 }
 header .col p {
   font-size: 1.2rem;
 }
 header .col p a#btn-listen {
-  display: block;
-  padding: 0.5em 1em;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  line-height: 1;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
@@ -100,20 +101,39 @@ header .col p a#btn-listen {
 header .col p a#btn-listen:hover, header .col p a#btn-listen:focus {
   background-color: #73bc4f;
 }
+@media only screen and (min-width: 36em) {
+  header .col p a#btn-listen {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 36em) {
+  header .col p {
+    height: 100%;
+  }
+}
 header .col .header__instagram {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0.6em;
+  width: 3em;
+  height: 3em;
+  position: relative;
   background-color: #7ecb58;
   transition: background-color 200ms ease-in-out;
+}
+header .col .header__instagram svg {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 header .col .header__instagram:hover, header .col .header__instagram:focus {
   background-color: #73bc4f;
 }
-header .col .header__instagram svg {
-  height: 100%;
-  display: block;
+@media only screen and (min-width: 36em) {
+  header .col .header__instagram {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+  }
 }
 @media only screen and (min-width: 36em) {
   header {
@@ -378,7 +398,7 @@ footer .container #signature svg path {
 }
 #modal-background #modal {
   width: 90%;
-  padding: 1em;
+  padding: 1.5em;
   background-color: #fff;
 }
 #modal-background #modal > p {
@@ -399,6 +419,7 @@ footer .container #signature svg path {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
+  margin-top: 1em;
 }
 #modal-background #modal .streaming_platforms a {
   gap: 1em;

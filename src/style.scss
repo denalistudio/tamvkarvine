@@ -87,17 +87,18 @@ header {
 
     .col {
         gap: 1em;
-        display: inline-grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: auto auto;
+        display: inline-flex;
         align-items: center;
 
         p {
             font-size: 1.2rem;
 
             a#btn-listen {
-                display: block;
-                padding: .5em 1em;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                padding: 0 1em;
+                line-height: 1;
                 color: $white;
                 font-size: 1.2rem;
                 font-weight: 700;
@@ -110,25 +111,41 @@ header {
                 &:focus {
                     background-color: $accent-hover;
                 }
+
+                @media only screen and (min-width: 36em) {
+                    height: 100%;
+                }
+            }
+
+            @media only screen and (min-width: 36em) {
+                height: 100%;
             }
         }
 
         .header__instagram {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            padding: .6em;
+            width: 3em;
+            height: 3em;
+            position: relative;
             background-color: $accent;
             transition: background-color 200ms ease-in-out;
+
+            svg {
+                width: 60%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             &:hover,
             &:focus {
                 background-color: $accent-hover;
             }
 
-            svg {
+            @media only screen and (min-width: 36em) {
+                width: auto;
                 height: 100%;
-                display: block;
+                aspect-ratio: 1;
             }
         }
     }
@@ -405,7 +422,7 @@ footer {
 
     #modal {
         width: 90%;
-        padding: 1em;
+        padding: 1.5em;
         background-color: $white;
 
         &>p {
@@ -428,6 +445,7 @@ footer {
             display: grid;
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr;
+            margin-top: 1em;
 
             a {
                 gap: 1em;

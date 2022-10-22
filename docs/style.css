@@ -167,7 +167,7 @@ h2.episode-name {
 .latest-episode__grid .latest-episode__content .links a {
   display: flex;
 }
-.latest-episode__grid .latest-episode__content .links a img {
+.latest-episode__grid .latest-episode__content .links a svg {
   width: 100%;
 }
 @media only screen and (min-width: 48em) {
@@ -175,9 +175,14 @@ h2.episode-name {
     grid-template-rows: 2.5em;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .latest-episode__grid .latest-episode__content .links a img {
+  .latest-episode__grid .latest-episode__content .links a svg {
     width: auto;
     height: 100%;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .latest-episode__grid .latest-episode__content .links {
+    grid-template-rows: 3em;
   }
 }
 @media only screen and (min-width: 36em) {

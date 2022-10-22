@@ -386,7 +386,7 @@ footer .container #signature svg path {
   background-color: #fff;
 }
 #modal-background #modal > p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -429,6 +429,39 @@ footer .container #signature svg path {
 }
 #modal-background #modal .streaming_platforms a:hover, #modal-background #modal .streaming_platforms a:focus {
   border-color: #7ecb58;
+}
+#modal-background .button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+#modal-background button {
+  all: unset;
+  appearance: none;
+  height: 3em;
+  gap: 0.7em;
+  display: inline-flex;
+  align-items: center;
+  margin: auto;
+  padding: 0 1em;
+  background-color: #7ecb58;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+#modal-background button:hover, #modal-background button:focus {
+  background-color: #73bc4f;
+}
+#modal-background button svg {
+  height: 1.5em;
+}
+#modal-background button svg path {
+  fill: #fff;
+}
+#modal-background button span {
+  font-size: 1.2rem;
 }
 #modal-background.open {
   z-index: 1;

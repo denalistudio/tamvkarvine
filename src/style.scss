@@ -413,7 +413,7 @@ footer {
         background-color: $white;
 
         &>p {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             text-align: center;
             text-transform: uppercase;
@@ -463,6 +463,46 @@ footer {
                     border-color: $accent;
                 }
             }
+        }
+    }
+
+    .button_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5em;
+    }
+
+    button {
+        all: unset;
+        appearance: none;
+        height: 3em;
+        gap: .7em;
+        display: inline-flex;
+        align-items: center;
+        margin: auto;
+        padding: 0 1em;
+        background-color: $accent;
+        color: $white;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 200ms ease-in-out;
+
+        &:hover,
+        &:focus {
+            background-color: $accent-hover;
+        }
+
+        svg {
+            height: 1.5em;
+
+            path {
+                fill: $white;
+            }
+        }
+
+        span {
+            font-size: 1.2rem;
         }
     }
 

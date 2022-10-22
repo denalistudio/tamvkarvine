@@ -504,6 +504,14 @@
             setTimeout(function () {
                 modal.classList.remove("display");
             }, 210);
+            if (modal.scrollTop > 0) {
+                setTimeout(function () {
+                    modal.scrollTo({
+                        top: 0,
+                        behavior: "instant"
+                    });
+                }, 205);
+            };
             body.style.overflowY = "auto";
             modalOpen = false;
         };

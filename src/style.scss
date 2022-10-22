@@ -117,7 +117,7 @@ header {
             height: 100%;
             display: flex;
             align-items: center;
-            padding: .5em;
+            padding: .6em;
             background-color: $accent;
             transition: background-color 200ms ease-in-out;
 
@@ -328,7 +328,7 @@ footer {
         display: grid;
         grid-template-rows: auto auto auto;
         grid-template-columns: 1fr 2em;
-        grid-template-areas: "footer-logo footer__instagram" "copyright footer__instagram" ". .";
+        grid-template-areas: "footer-logo footer__instagram" "copyright footer__instagram" "signature footer__instagram";
         color: $white;
         padding: 2em 1em;
 
@@ -363,6 +363,10 @@ footer {
                 align-items: center;
                 padding-top: 0;
             }
+        }
+
+        #signature {
+            grid-area: signature;
         }
 
         #signature svg {
@@ -400,33 +404,55 @@ footer {
     transition: all 200ms ease-in-out;
 
     #modal {
-        width: 50%;
+        width: 90%;
+        padding: 1em;
         background-color: $white;
 
+        &>p {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+
+            span {
+                white-space: nowrap;
+                -webkit-user-select: none !important;
+                -moz-user-select: none !important;
+                -ms-user-select: none !important;
+                user-select: none !important;
+            }
+        }
+
         .streaming_platforms {
+            gap: 1em;
             display: grid;
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
 
             a {
+                gap: 1em;
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 4em 1fr;
+                align-items: center;
                 padding: 1em;
                 border-width: 3px;
                 border-style: solid;
                 border-color: $grey;
                 text-decoration: none;
                 transition: border-color 200ms ease-in-out;
-    
+
                 img {
                     width: 100%;
                     display: block;
-                    margin-bottom: 1em;
                 }
-    
+
                 p {
                     color: $black;
-                    text-align: center;
+                    font-size: 1.2rem;
+                    font-weight: 500;
                 }
-    
+
                 &:hover,
                 &:focus {
                     border-color: $accent;

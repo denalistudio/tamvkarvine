@@ -104,7 +104,7 @@ header .col .header__instagram {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0.5em;
+  padding: 0.6em;
   background-color: #7ecb58;
   transition: background-color 200ms ease-in-out;
 }
@@ -308,7 +308,7 @@ footer .container {
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 2em;
-  grid-template-areas: "footer-logo footer__instagram" "copyright footer__instagram" ". .";
+  grid-template-areas: "footer-logo footer__instagram" "copyright footer__instagram" "signature footer__instagram";
   color: #fff;
   padding: 2em 1em;
 }
@@ -340,6 +340,9 @@ footer .container .footer__instagram a svg {
     align-items: center;
     padding-top: 0;
   }
+}
+footer .container #signature {
+  grid-area: signature;
 }
 footer .container #signature svg {
   height: 12px;
@@ -374,15 +377,35 @@ footer .container #signature svg path {
   transition: all 200ms ease-in-out;
 }
 #modal-background #modal {
-  width: 50%;
+  width: 90%;
+  padding: 1em;
   background-color: #fff;
 }
+#modal-background #modal > p {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+#modal-background #modal > p span {
+  white-space: nowrap;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
 #modal-background #modal .streaming_platforms {
+  gap: 1em;
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 #modal-background #modal .streaming_platforms a {
+  gap: 1em;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 4em 1fr;
+  align-items: center;
   padding: 1em;
   border-width: 3px;
   border-style: solid;
@@ -393,11 +416,11 @@ footer .container #signature svg path {
 #modal-background #modal .streaming_platforms a img {
   width: 100%;
   display: block;
-  margin-bottom: 1em;
 }
 #modal-background #modal .streaming_platforms a p {
   color: #000;
-  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 #modal-background #modal .streaming_platforms a:hover, #modal-background #modal .streaming_platforms a:focus {
   border-color: #7ecb58;

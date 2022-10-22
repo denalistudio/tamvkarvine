@@ -377,7 +377,7 @@ footer .container #signature svg path {
   z-index: -1;
   visibility: hidden;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 200ms ease-in-out;
 }
 #modal-background #modal {
@@ -403,7 +403,7 @@ footer .container #signature svg path {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
-  margin-top: 1em;
+  margin: 1em 0 1.5em 0;
 }
 #modal-background #modal .streaming_platforms a {
   gap: 1em;
@@ -418,24 +418,55 @@ footer .container #signature svg path {
   text-decoration: none;
   transition: border-color 200ms ease-in-out;
 }
-#modal-background #modal .streaming_platforms a img {
+#modal-background #modal .streaming_platforms a:hover, #modal-background #modal .streaming_platforms a:focus {
+  border-color: #7ecb58;
+}
+#modal-background #modal .streaming_platforms a img,
+#modal-background #modal .streaming_platforms a svg {
   width: 100%;
   display: block;
+}
+@media only screen and (min-width: 36em) {
+  #modal-background #modal .streaming_platforms a img,
+#modal-background #modal .streaming_platforms a svg {
+    width: 60%;
+    margin: auto;
+  }
 }
 #modal-background #modal .streaming_platforms a p {
   color: #000;
   font-size: 1.2rem;
   font-weight: 500;
 }
-#modal-background #modal .streaming_platforms a:hover, #modal-background #modal .streaming_platforms a:focus {
-  border-color: #7ecb58;
+@media only screen and (min-width: 36em) {
+  #modal-background #modal .streaming_platforms a p {
+    text-align: center;
+  }
 }
-#modal-background .button_container {
+@media only screen and (min-width: 36em) {
+  #modal-background #modal .streaming_platforms a p {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 36em) {
+  #modal-background #modal .streaming_platforms a {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    padding: 1.3em;
+  }
+}
+@media only screen and (min-width: 36em) {
+  #modal-background #modal .streaming_platforms {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1.5em 0 2em 0;
+  }
+}
+#modal-background #modal .button_container {
   display: flex;
   justify-content: center;
-  margin-top: 1.5em;
 }
-#modal-background button {
+#modal-background #modal .button_container button {
   all: unset;
   appearance: none;
   height: 3em;
@@ -451,17 +482,27 @@ footer .container #signature svg path {
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
 }
-#modal-background button:hover, #modal-background button:focus {
+#modal-background #modal .button_container button:hover, #modal-background #modal .button_container button:focus {
   background-color: #73bc4f;
 }
-#modal-background button svg {
+#modal-background #modal .button_container button svg {
   height: 1.5em;
 }
-#modal-background button svg path {
+#modal-background #modal .button_container button svg path {
   fill: #fff;
 }
-#modal-background button span {
+#modal-background #modal .button_container button span {
   font-size: 1.2rem;
+}
+@media only screen and (min-width: 36em) {
+  #modal-background #modal {
+    padding: 2em;
+  }
+}
+@media only screen and (min-width: 62em) {
+  #modal-background #modal {
+    width: 45em;
+  }
 }
 #modal-background.open {
   z-index: 1;

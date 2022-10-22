@@ -404,7 +404,7 @@ footer {
     z-index: -1;
     visibility: hidden;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     transition: all 200ms ease-in-out;
 
     #modal {
@@ -432,7 +432,7 @@ footer {
             display: grid;
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr;
-            margin-top: 1em;
+            margin: 1em 0 1.5em 0;
 
             a {
                 gap: 1em;
@@ -447,62 +447,95 @@ footer {
                 text-decoration: none;
                 transition: border-color 200ms ease-in-out;
 
-                img {
+                &:hover,
+                &:focus {
+                    border-color: $accent;
+                }
+
+                img,
+                svg {
                     width: 100%;
                     display: block;
+
+                    @media only screen and (min-width: 36em) {
+                        width: 60%;
+                        margin: auto;
+                    }
                 }
 
                 p {
                     color: $black;
                     font-size: 1.2rem;
                     font-weight: 500;
+
+                    @media only screen and (min-width: 36em) {
+                        text-align: center;
+                    }
+
+                    @media only screen and (min-width: 36em) {
+                        font-size: 1.3rem;
+                    }
                 }
 
+                @media only screen and (min-width: 36em) {
+                    grid-template-rows: auto 1fr;
+                    grid-template-columns: 1fr;
+                    padding: 1.3em;
+                }
+            }
+
+            @media only screen and (min-width: 36em) {
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 1.5em 0 2em 0;
+            }
+        }
+
+        .button_container {
+            display: flex;
+            justify-content: center;
+    
+            button {
+                all: unset;
+                appearance: none;
+                height: 3em;
+                gap: .7em;
+                display: inline-flex;
+                align-items: center;
+                margin: auto;
+                padding: 0 1em;
+                background-color: $accent;
+                color: $white;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: background-color 200ms ease-in-out;
+        
                 &:hover,
                 &:focus {
-                    border-color: $accent;
+                    background-color: $accent-hover;
+                }
+        
+                svg {
+                    height: 1.5em;
+        
+                    path {
+                        fill: $white;
+                    }
+                }
+        
+                span {
+                    font-size: 1.2rem;
                 }
             }
         }
-    }
 
-    .button_container {
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5em;
-    }
-
-    button {
-        all: unset;
-        appearance: none;
-        height: 3em;
-        gap: .7em;
-        display: inline-flex;
-        align-items: center;
-        margin: auto;
-        padding: 0 1em;
-        background-color: $accent;
-        color: $white;
-        font-weight: 600;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: background-color 200ms ease-in-out;
-
-        &:hover,
-        &:focus {
-            background-color: $accent-hover;
+        @media only screen and (min-width: 36em) {
+            padding: 2em;
         }
 
-        svg {
-            height: 1.5em;
-
-            path {
-                fill: $white;
-            }
-        }
-
-        span {
-            font-size: 1.2rem;
+        @media only screen and (min-width: 62em) {
+            width: 45em;
         }
     }
 
